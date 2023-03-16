@@ -1,0 +1,8 @@
+com/whysapp/app/service/UserRegistrationRequest.class
+com/whysapp/app/resource/UserController.class
+com/whysapp/app/repository/UserRepository.class
+com/whysapp/app/enums/UserRoles.class
+com/whysapp/app/UserApplication.class
+com/whysapp/app/domain/User.class
+com/whysapp/app/domain/User$UserBuilder.class
+com/whysapp/app/service/UserService.class

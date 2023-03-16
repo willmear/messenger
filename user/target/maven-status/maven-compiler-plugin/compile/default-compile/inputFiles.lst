@@ -1,0 +1,7 @@
+/home/will/whysapp/user/src/main/java/com/whysapp/app/UserApplication.java
+/home/will/whysapp/user/src/main/java/com/whysapp/app/service/UserService.java
+/home/will/whysapp/user/src/main/java/com/whysapp/app/resource/UserController.java
+/home/will/whysapp/user/src/main/java/com/whysapp/app/service/UserRegistrationRequest.java
+/home/will/whysapp/user/src/main/java/com/whysapp/app/enums/UserRoles.java
+/home/will/whysapp/user/src/main/java/com/whysapp/app/repository/UserRepository.java
+/home/will/whysapp/user/src/main/java/com/whysapp/app/domain/User.java

@@ -27,7 +27,7 @@ public class UserController {
 
     private final UserService userService;
 
-    @PostMapping
+    @PostMapping("/create")
     public void registerUser(@RequestBody UserRegistrationRequest userRegistrationRequest) {
         log.info("register new customer {}", userRegistrationRequest);
         userService.registerUser(userRegistrationRequest);

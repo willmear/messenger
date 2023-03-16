@@ -7,3 +7,5 @@ export interface User {
     email: String;
     role: UserRoles;
 }
+
+export type NewUser = Omit<User, 'id'> & { id: null };

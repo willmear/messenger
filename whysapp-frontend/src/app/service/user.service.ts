@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
 import { CustomResponse } from '../interface/custom-response';
-import { User } from '../interface/user';
+import { NewUser, User } from '../interface/user';
 
 export type EntityResponseType = HttpResponse<User>;
 export type EntityArrayResponseType = HttpResponse<User[]>;
@@ -12,9 +12,9 @@ export type EntityArrayResponseType = HttpResponse<User[]>;
   providedIn: 'root'
 })
 export class UserService {
-  protected resourceUrl = 'any'
+  protected resourceUrl = 'http://localhost:8080/api/v1/user'
 
-  constructor(private http: HttpClient) {}
+  constructor(protected http: HttpClient) {}
 
 
     find(id: number): Observable<EntityResponseType> {
@@ -25,10 +25,9 @@ export class UserService {
       return this.http.delete(`${this.resourceUrl}/delete/${id}`, { observe: 'response' });
     }
 
-    create(user: User): Observable<EntityResponseType> {
-      return this.http.post<User>(this.resourceUrl, user, { observe: 'response' });
+    create(user: NewUser): Observable<EntityResponseType> {
+      return this.http.post<User>(`${this.resourceUrl}/create`, user, { observe: 'response' });
     }
-  
     
 
 }

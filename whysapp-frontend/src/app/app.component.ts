@@ -10,8 +10,6 @@ import { UserService } from './service/user.service';
 export class AppComponent {
   title = 'whysapp-frontend';
 
-  constructor(private userService: UserService) {}
-
   ngOnInit(): void {
 
   }
