@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { UserService } from './service/user.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'whysapp-frontend';
+
+  constructor(private userService: UserService) {}
+
+  ngOnInit(): void {
+
+  }
+
+
 }
