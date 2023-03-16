@@ -8,7 +8,6 @@ import { UserService } from './service/user.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'whysapp-frontend';
 
   ngOnInit(): void {
 
