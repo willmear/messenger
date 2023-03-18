@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../service/user.service';
+import { UserService } from '../_service/user.service';
 import { User } from '../interface/user';
 import { UserRoles } from '../enum/UserRoles.enum';
+import { AuthService } from '../_service/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -11,9 +12,18 @@ import { UserRoles } from '../enum/UserRoles.enum';
 export class RegisterComponent implements OnInit {
 
   users: User[];
-  user: any;
+  form: any = {
+    firstname: null,
+    lastname: null,
+    email: null,
+    password: null
+  }
 
-  constructor(protected userService: UserService) {
+  isSuccessful = false;
+  isSignUpFailed = false;
+  errorMessage = '';
+
+  constructor(private authService: AuthService) {
     this.users = [];
   }
 
@@ -21,11 +31,21 @@ export class RegisterComponent implements OnInit {
 
   }
 
-  onUserCreate(user: { id: null, username: string, email: string, password: string, role: UserRoles.USER }) {
-    this.userService.create(user).subscribe(res => {  
-      console.log(res);
-      this.ngOnInit();
+  onSubmit(): void {
+    const { firstname, lastname, email, password } = this.form;
+ 
+
+      this.authService.register(String(firstname), String(lastname), String(email), String(password)).subscribe({next: data => {  
+      console.log(data);
+      this.isSuccessful = true;
+      this.isSignUpFailed = false;
+      },
+      error: err => {
+        this.errorMessage = err.error.message;
+        this.isSignUpFailed = true;
+      }
     });
   }
+
 
 }

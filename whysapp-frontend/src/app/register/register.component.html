@@ -2,21 +2,27 @@
     <div id="signup-card" class="card" style="padding: 3rem 1rem;">
         <div class="card-body">
             <h4 class="card-title" style="text-align: center">Sign Up</h4>
-            <form #userForm="ngForm" (ngSubmit)="onUserCreate(userForm.value)">
+            <form name="form" #f = "ngForm" novalidate (ngSubmit)="f.form.valid && onSubmit()">
                 <div class="form-group">
-                    <label for="exampleInputEmail1" style="margin: 0.5rem;">Username:</label>
-                    <input name="username" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username" ngModel/>
+                    <label for="firstname" style="margin: 0.5rem;">Firstname:</label>
+                    <input [(ngModel)]="form.firstname" required name="firstname" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username" #firstname="ngModel"/>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputPassword1" style="margin: 0.5rem;">Email:</label>
-                    <input name="email" type="email" class="form-control" id="exampleInputPassword1" placeholder="Enter email" ngModel>
+                    <label for="lastname" style="margin: 0.5rem;">Lastname:</label>
+                    <input [(ngModel)]="form.lastname" required name="lastname" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter username" #lastname="ngModel"/>
+                </div>
+                <div class="form-group">
+                    <label for="email" style="margin: 0.5rem;">Email:</label>
+                    <input [(ngModel)]="form.email" email required name="email" type="email" class="form-control" id="exampleInputPassword1" placeholder="Enter email" #email="ngModel">
                     <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputPassword1" style="margin: 0.5rem;">Password:</label>
-                    <input  name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter password" ngModel>
+                    <label for="password" style="margin: 0.5rem;">Password:</label>
+                    <input [(ngModel)]="form.password" required name="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Enter password" #password="ngModel">
                 </div>
-                <button type="submit" class="btn btn-primary" style="margin-top: 1rem;">Submit</button>
+                <div class="form-group">
+                <button class="btn btn-primary" style="margin-top: 1rem;">Submit</button>
+                </div>
             </form>
         </div>
     </div>
