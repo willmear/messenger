@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { AuthService } from './_service/auth.service';
 import { TokenStorageService } from './_service/token-storage.service';
 import { UserService } from './_service/user.service';
 
@@ -10,28 +11,25 @@ import { UserService } from './_service/user.service';
 })
 export class AppComponent {
 
-  private roles: string[] = []
-  isLoggedIn = false;
-  username?: string;
 
-  constructor(private tokenStorageService: TokenStorageService) {}
+  constructor(private authService: AuthService) {}
 
 
   ngOnInit(): void {
-    this.isLoggedIn = !!this.tokenStorageService.getToken();
 
-    if (this.isLoggedIn) {
-      const user = this.tokenStorageService.getUser();
-      this.roles = user.roles;
+    
 
-      this.username = user.email;
-    }
+  
   }
 
-  logout(): void {
-    this.tokenStorageService.signOut();
-    window.location.reload();
+  public isLoggedIn() {
+    return this.authService.isLoggedin();
   }
+
+  public logout() {
+    this.authService.clear()
+  }
+
 
 
 }

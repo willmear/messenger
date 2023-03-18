@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../_service/user.service';
 import { User } from '../interface/user';
-import { UserRoles } from '../enum/UserRoles.enum';
 import { AuthService } from '../_service/auth.service';
 
 @Component({
@@ -21,13 +19,13 @@ export class RegisterComponent implements OnInit {
 
   isSuccessful = false;
   isSignUpFailed = false;
-  errorMessage = '';
+  errorMessage = '';  
 
   constructor(private authService: AuthService) {
     this.users = [];
   }
 
-  ngOnInit(): void {
+  ngOnInit(): void {  
 
   }
 

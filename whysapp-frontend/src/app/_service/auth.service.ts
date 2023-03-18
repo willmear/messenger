@@ -5,9 +5,6 @@ import { User } from '../interface/user';
 
 const AUTH_API = 'http://localhost:8080/api/v1/auth/';
 
-const httpOptions = {
-  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
-};
 
 @Injectable({
     providedIn: 'root',
@@ -35,5 +32,29 @@ const httpOptions = {
           password
         },
       );
+    }
+
+    public setRoles(roles: string) {
+      localStorage.setItem("roles", JSON.stringify(roles));
+    }
+
+    public getRoles() {
+      return JSON.parse(localStorage.getItem("roles") || '{}');
+    }
+
+    public setToken(jwtToken: string) {
+      localStorage.setItem("jwtToken", jwtToken);
+    }
+
+    public getToken(): string {
+      return localStorage.getItem("jwtToken") || '{}';
+    }
+
+    public clear() {
+      localStorage.clear();
+    }
+
+    public isLoggedin() {
+      return (this.getRoles() != '{}') && (this.getToken() != '{}');
     }
   }

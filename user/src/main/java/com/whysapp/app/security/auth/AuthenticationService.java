@@ -8,6 +8,9 @@ import com.whysapp.app.security.token.Token;
 import com.whysapp.app.security.token.TokenRepository;
 import com.whysapp.app.security.token.TokenType;
 import lombok.RequiredArgsConstructor;
+
+import java.util.Optional;
+
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -23,7 +26,9 @@ public class AuthenticationService {
     private final AuthenticationManager authenticationManager;
 
     public AuthenticationResponse register(RegisterRequest request) {
-        var user = User.builder()
+        Optional<User> exists = repository.findByEmail(request.getEmail());
+        if(!exists.isPresent()) {
+            var user = User.builder()
                 .firstname(request.getFirstname())
                 .lastname(request.getLastname())
                 .email(request.getEmail())
@@ -36,6 +41,8 @@ public class AuthenticationService {
         return AuthenticationResponse.builder()
                 .token(jwtToken)
                 .build();
+        }
+        return null;
     }
 
     public AuthenticationResponse authenticate(AuthenticationRequest request) {
@@ -52,6 +59,7 @@ public class AuthenticationService {
         saveUserToken(user, jwtToken);
         return AuthenticationResponse.builder()
                 .token(jwtToken)
+                .role(user.getRole())
                 .build();
     }
 

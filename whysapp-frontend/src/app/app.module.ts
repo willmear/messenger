@@ -8,8 +8,8 @@ import { RegisterComponent } from './register/register.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
-import { authInterceptorProviders } from './_helpers/auth.interceptor';
 import { JwtModule } from '@auth0/angular-jwt';
+import { LoginComponent } from './login/login.component';
 
 export function tokenGetter() {
   return localStorage.getItem("access_token");
@@ -19,7 +19,8 @@ export function tokenGetter() {
   declarations: [
     AppComponent,
     RegisterComponent,
-    HomeComponent
+    HomeComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
