@@ -15,7 +15,7 @@
 
   <modules>
     <module>user</module>
-      <module>Messages</module>
+    <module>message</module>
   </modules>
 
   <properties>

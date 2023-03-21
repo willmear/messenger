@@ -1,0 +1,13 @@
+/home/will/whysapp/message/src/main/java/com/whysapp/app/service/MessageService.java
+/home/will/whysapp/message/src/main/java/com/whysapp/app/resource/ConversationModelAssembler.java
+/home/will/whysapp/message/src/main/java/com/whysapp/app/resource/ConversationController.java
+/home/will/whysapp/message/src/main/java/com/whysapp/app/exception/ConversationNotFoundException.java
+/home/will/whysapp/message/src/main/java/com/whysapp/app/repository/ConversationRepository.java
+/home/will/whysapp/message/src/main/java/com/whysapp/app/resource/MessageModelAssembler.java
+/home/will/whysapp/message/src/main/java/com/whysapp/app/domain/Conversation.java
+/home/will/whysapp/message/src/main/java/com/whysapp/app/repository/MessageRepository.java
+/home/will/whysapp/message/src/main/java/com/whysapp/app/service/ConversationService.java
+/home/will/whysapp/message/src/main/java/com/whysapp/app/exception/MessageNotFoundException.java
+/home/will/whysapp/message/src/main/java/com/whysapp/app/resource/MessageController.java
+/home/will/whysapp/message/src/main/java/com/whysapp/app/MessagesApplication.java
+/home/will/whysapp/message/src/main/java/com/whysapp/app/domain/Message.java
