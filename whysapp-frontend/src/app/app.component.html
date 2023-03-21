@@ -13,7 +13,7 @@
                   </span>
               </a>
             </li>
-            <li *ngIf="!isLoggedIn" class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+            <li *ngIf="!isLoggedIn()" class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
               <a class="nav-link" routerLink="/register">
                   <span>
                       <span>Sign Up</span>
@@ -23,7 +23,14 @@
             <li *ngIf="isLoggedIn()" class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
               <a class="nav-link" (click)="logout()" routerLink="">
                   <span>
-                      <span>LogOut</span>
+                      <span>Logout</span>
+                  </span>
+              </a>
+            </li>
+            <li *ngIf="roleMatch(['ADMIN'])" class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+              <a class="nav-link" routerLink="">
+                  <span>
+                      <span>Admin</span>
                   </span>
               </a>
             </li>

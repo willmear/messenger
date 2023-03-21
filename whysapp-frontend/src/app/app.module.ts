@@ -10,6 +10,10 @@ import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
 import { JwtModule } from '@auth0/angular-jwt';
 import { LoginComponent } from './login/login.component';
+import { AuthGuard } from './_auth/auth.guard';
+import { authInterceptorProviders } from './_auth/auth.interceptor';
+import { MessengerComponent } from './messenger/messenger.component';
+import { ForbiddenComponent } from './forbidden/forbidden.component';
 
 export function tokenGetter() {
   return localStorage.getItem("access_token");
@@ -20,7 +24,9 @@ export function tokenGetter() {
     AppComponent,
     RegisterComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    MessengerComponent,
+    ForbiddenComponent
   ],
   imports: [
     BrowserModule,

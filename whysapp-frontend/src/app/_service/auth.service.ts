@@ -57,4 +57,17 @@ const AUTH_API = 'http://localhost:8080/api/v1/auth/';
     public isLoggedin() {
       return (this.getRoles() != '{}') && (this.getToken() != '{}');
     }
+
+    public roleMatch(allowedRoles: any): boolean {
+      let isMatch = false;
+      const userRoles:any = this.getRoles();
+
+      if(userRoles != null && userRoles) {
+        if(userRoles == allowedRoles) {
+          isMatch = true;
+          return isMatch;
+        }
+      }
+      return isMatch;
+    }
   }

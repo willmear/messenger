@@ -8,11 +8,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="user" />
+        <module name="Messages" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="user" target="17" />
-      <module name="whysapp-backend" target="17" />
-    </bytecodeTargetLevel>
   </component>
 </project>

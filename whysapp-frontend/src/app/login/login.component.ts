@@ -30,8 +30,6 @@ export class LoginComponent implements OnInit {
 
     this.authService.login(email, password).subscribe({next:data => {
       console.log(data);
-      console.log(data.role);
-      console.log(data.token);
       this.authService.setRoles(data.role);
       this.authService.setToken(data.token);
 
