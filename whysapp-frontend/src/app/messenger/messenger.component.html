@@ -1,1 +1,19 @@
-<p>messenger works!</p>
+ <div class="container">
+    <div class="card chat-app">
+        <div class="contacts-list">
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><fa-icon [icon]="faMagnifyingGlass"></fa-icon></span>
+                </div>
+                <input type="text" class="form-control" placeholder="Search...">
+            </div>
+            <ul class="list-unstyled conversation-list mt-2 mb-0">
+                <li *ngFor="let conversation of conversations" class="clearfix">
+                    <div class="about">
+                        <div class="name">{{ conversation.recipient }}</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+.container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+}
+
+.chat-app {
+    margin-top: 5%;
+    grid-column-start: 1;
+    grid-column-end: span 5;
+    grid-row-start: 1;
+    grid-row-end: span 5;
+}
+
+.card {
+    width:100%;
+    height: 1000%;
+}
+
+.contacts-list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1%;
+}

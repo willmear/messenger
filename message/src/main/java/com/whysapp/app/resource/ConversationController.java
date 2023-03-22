@@ -3,6 +3,9 @@ package com.whysapp.app.resource;
 import com.whysapp.app.domain.Conversation;
 import com.whysapp.app.service.ConversationService;
 import lombok.RequiredArgsConstructor;
+
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.CollectionModel;
 import org.springframework.hateoas.EntityModel;
@@ -17,7 +20,7 @@ public class ConversationController {
     private final ConversationService conversationService;
 
     @GetMapping("/conversations")
-    public CollectionModel<EntityModel<Conversation>> allConversation() {
+    public List<Conversation> allConversation() {
         return conversationService.allConversation();
     }
 
@@ -27,7 +30,7 @@ public class ConversationController {
     }
 
     @PostMapping()
-    public ResponseEntity<?> addConversation(Conversation conversation) {
+    public ResponseEntity<?> addConversation(@RequestBody Conversation conversation) {
         return conversationService.addConversation(conversation);
     }
 }

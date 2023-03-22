@@ -10,4 +10,5 @@
 /home/will/whysapp/message/src/main/java/com/whysapp/app/exception/MessageNotFoundException.java
 /home/will/whysapp/message/src/main/java/com/whysapp/app/resource/MessageController.java
 /home/will/whysapp/message/src/main/java/com/whysapp/app/MessagesApplication.java
+/home/will/whysapp/message/src/main/java/com/whysapp/app/security/SecurityConfiguration.java
 /home/will/whysapp/message/src/main/java/com/whysapp/app/domain/Message.java

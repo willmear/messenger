@@ -15,12 +15,11 @@ export class AppComponent {
 
   constructor(private authService: AuthService, private router: Router) {}
 
-
   ngOnInit(): void {
 
-    
 
-  
+
+
   }
 
   public isLoggedIn() {

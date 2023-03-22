@@ -25,12 +25,8 @@ public class ConversationService {
     private final ConversationRepository conversationRepository;
     private final ConversationModelAssembler assembler;
 
-    public CollectionModel<EntityModel<Conversation>> allConversation() {
-        List<EntityModel<Conversation>> conversations = conversationRepository.findAll().stream()
-                .map(assembler::toModel)
-                .collect(Collectors.toList());
-        return CollectionModel.of(conversations,
-                linkTo(methodOn(ConversationController.class).allConversation()).withSelfRel());
+    public List<Conversation> allConversation() {
+        return conversationRepository.findAll();
     }
 
     public EntityModel<Conversation> oneConversation(Long id) {

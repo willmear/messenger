@@ -14,9 +14,10 @@ import { AuthGuard } from './_auth/auth.guard';
 import { authInterceptorProviders } from './_auth/auth.interceptor';
 import { MessengerComponent } from './messenger/messenger.component';
 import { ForbiddenComponent } from './forbidden/forbidden.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 export function tokenGetter() {
-  return localStorage.getItem("access_token");
+  return localStorage.getItem("jwtToken");
 }
 
 @NgModule({
@@ -37,9 +38,10 @@ export function tokenGetter() {
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter,
-        allowedDomains: ["http://localhost:8080"]
+        allowedDomains: ["http://localhost:4200", "http://localhost:8080", "http://localhost:8081"]
       }
-    })
+    }),
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
