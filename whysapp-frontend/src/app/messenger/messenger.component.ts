@@ -4,6 +4,7 @@ import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import { Conversation } from '../interface/conversation';
 import { ConversationService } from '../_service/conversation.service';
 import { MessageService } from '../_service/message.service';
+import {AuthService} from "../_service/auth.service";
 
 @Component({
   selector: 'app-messenger',
@@ -15,19 +16,20 @@ export class MessengerComponent implements OnInit{
   conversations: Conversation[] = [];
   conversation: any;
 
-  constructor(private messageService: MessageService, private conversationService: ConversationService) {  }
+  constructor(private messageService: MessageService, private conversationService: ConversationService,
+              private authService: AuthService) {  }
 
   ngOnInit(): void {
 
     this.conversationService.query().subscribe((res: HttpResponse<Conversation[]>) => this.onConversationSuccess(res.body));
-    
+
     // this.conversationService.create({sender: 'Will', recipient: 'Maddy', messages: []}).subscribe(res => {
     //   console.log(res);
     // })
   }
 
   onConversationSuccess(conversations: Conversation[] | null): void {
-    this.conversations = conversations || [];
+    this.conversations = conversations?.filter((convo) => convo.sender == this.authService.getEmail()) || [];
     this.conversations.forEach(e => this.addConversation(e));
   }
 

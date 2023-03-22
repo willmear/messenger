@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
 
 
   ngOnInit(): void {
-    
+
   }
 
   onSubmit(): void {
@@ -32,6 +32,7 @@ export class LoginComponent implements OnInit {
       console.log(data);
       this.authService.setRoles(data.role);
       this.authService.setToken(data.token);
+      this.authService.setEmail(data.email);
 
       if (data.role === 'USER') {
         this.router.navigate(['/home']);
@@ -44,9 +45,9 @@ export class LoginComponent implements OnInit {
 
   }
 
-  
 
-  
+
+
 
 }
 

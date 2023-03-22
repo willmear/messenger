@@ -11,7 +11,7 @@ const AUTH_API = 'http://localhost:8080/api/v1/auth/';
   })
   export class AuthService {
     constructor(private http: HttpClient) {}
-  
+
     login(email: string, password: string): Observable<any> {
       return this.http.post(
         AUTH_API + 'authenticate',
@@ -21,7 +21,7 @@ const AUTH_API = 'http://localhost:8080/api/v1/auth/';
         }
       );
     }
-  
+
     register(firstname: string, lastname: string, email: string, password: string): Observable<any> {
       return this.http.post(
         AUTH_API + 'register',
@@ -36,6 +36,13 @@ const AUTH_API = 'http://localhost:8080/api/v1/auth/';
 
     public setRoles(roles: string) {
       localStorage.setItem("roles", JSON.stringify(roles));
+    }
+
+    public getEmail() {
+      return localStorage.getItem("email");
+    }
+    public setEmail(email: string) {
+      localStorage.setItem("email", email);
     }
 
     public getRoles() {
