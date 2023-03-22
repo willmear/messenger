@@ -6,16 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="38da1df7-686c-4a26-838a-f4169a74f9a3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Messages/target/classes/banner.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/message/target/classes/com/whysapp/app/resource/ConversationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/message/target/classes/com/whysapp/app/resource/ConversationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/message/target/classes/com/whysapp/app/resource/ConversationModelAssembler.class" beforeDir="false" afterPath="$PROJECT_DIR$/message/target/classes/com/whysapp/app/resource/ConversationModelAssembler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/message/target/classes/com/whysapp/app/security/SecurityConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/message/target/classes/com/whysapp/app/security/SecurityConfiguration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/message/target/classes/com/whysapp/app/service/ConversationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/message/target/classes/com/whysapp/app/service/ConversationService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/message/target/classes/com/whysapp/app/service/MessageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/message/target/classes/com/whysapp/app/service/MessageService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whysapp/app/security/auth/AuthenticationResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whysapp/app/security/auth/AuthenticationResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/src/main/java/com/whysapp/app/security/auth/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/user/src/main/java/com/whysapp/app/security/auth/AuthenticationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/whysapp-frontend/src/app/_service/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/whysapp-frontend/src/app/_service/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/whysapp-frontend/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/whysapp-frontend/src/app/login/login.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/whysapp-frontend/src/app/messenger/messenger.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/whysapp-frontend/src/app/messenger/messenger.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -197,6 +187,7 @@
       <workItem from="1679493873755" duration="1024000" />
       <workItem from="1679506845417" duration="2049000" />
       <workItem from="1679513572400" duration="619000" />
+      <workItem from="1679514936185" duration="310000" />
     </task>
     <servers />
   </component>

@@ -29,7 +29,7 @@ export class MessengerComponent implements OnInit{
   }
 
   onConversationSuccess(conversations: Conversation[] | null): void {
-    this.conversations = conversations?.filter((convo) => convo.sender == this.authService.getEmail()) || [];
+    this.conversations = conversations?.filter((convo) => (convo.sender || convo.recipient) == this.authService.getEmail()) || [];
     this.conversations.forEach(e => this.addConversation(e));
   }
 
