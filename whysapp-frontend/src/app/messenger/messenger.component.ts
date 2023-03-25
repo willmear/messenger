@@ -1,6 +1,6 @@
 import { HttpResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
+import { faMagnifyingGlass,faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import { Conversation } from '../interface/conversation';
 import { ConversationService } from '../_service/conversation.service';
 import { MessageService } from '../_service/message.service';
@@ -13,6 +13,7 @@ import {AuthService} from "../_service/auth.service";
 })
 export class MessengerComponent implements OnInit{
   faMagnifyingGlass = faMagnifyingGlass;
+  faPaperPlane = faPaperPlane;
   conversations: Conversation[] = [];
   conversation: any;
 

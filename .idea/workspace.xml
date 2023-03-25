@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="38da1df7-686c-4a26-838a-f4169a74f9a3" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/whysapp-frontend/src/app/messenger/messenger.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/whysapp-frontend/src/app/messenger/messenger.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/message/src/main/java/com/whysapp/app/domain/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/message/src/main/java/com/whysapp/app/domain/Message.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -187,7 +187,8 @@
       <workItem from="1679493873755" duration="1024000" />
       <workItem from="1679506845417" duration="2049000" />
       <workItem from="1679513572400" duration="619000" />
-      <workItem from="1679514936185" duration="310000" />
+      <workItem from="1679514936185" duration="855000" />
+      <workItem from="1679772479895" duration="515000" />
     </task>
     <servers />
   </component>

@@ -20,6 +20,7 @@ public class Message {
     private Long id;
     private String message;
     private LocalDateTime sentAt;
+    private String senderEmail;
 
     @ManyToOne
     @JoinColumn(name = "conversation_id")

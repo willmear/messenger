@@ -22,4 +22,19 @@
     top: 0;
     left: 0;
     padding: 1%;
+    height: 100%;
+    width: 25%;
+    border-right: 1px solid #eaeaea;
+}
+
+.chat {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 75%;
+    padding: 1%;
+}
+
+.chat .message-input {
+    margin-top: 63%;
 }
