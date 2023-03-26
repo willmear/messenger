@@ -27,6 +27,10 @@
     border-right: 1px solid #eaeaea;
 }
 
+.new-convo {
+    margin-top: 2%;
+}
+
 .chat {
     position: absolute;
     top: 0;
@@ -38,3 +42,8 @@
 .chat .message-input {
     margin-top: 63%;
 }
+
+.chat .messages {
+
+}
+

@@ -24,4 +24,18 @@ export class ConversationService {
     return this.http.post<Conversation>(`${this.resourceUrl}`, conversation, { observe: 'response' });
   }
 
+  public setCurrentConversation(conversationId: string) {
+    localStorage.setItem('currentConversation', conversationId);
+  }
+
+  // hmmm... this doesn't look very safe
+  public getCurrentConversation(): number {
+    let id: string | null = localStorage.getItem('currentConversation');
+    if (id != null) {
+      return parseInt(id);
+    } else {
+      return 0;
+    }
+  }
+
 }
