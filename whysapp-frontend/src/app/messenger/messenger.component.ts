@@ -1,11 +1,12 @@
 import { HttpResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { faMagnifyingGlass,faPaperPlane, faPlus } from '@fortawesome/free-solid-svg-icons';
-import { Conversation } from '../interface/conversation';
+import { Conversation, IConversation } from '../interface/conversation';
 import { Message } from '../interface/message';
 import { ConversationService } from '../_service/conversation.service';
 import { MessageService } from '../_service/message.service';
 import { AuthService } from "../_service/auth.service";
+import { Icon } from '@fortawesome/fontawesome-svg-core';
 
 @Component({
   selector: 'app-messenger',
@@ -17,32 +18,37 @@ export class MessengerComponent implements OnInit{
   faPaperPlane = faPaperPlane;
   faPlus = faPlus;
   errorMessage = '';
-  conversations: Conversation[] = [];
+  conversations: IConversation[];
   conversation: any;
   conversationForm: any = {
     recipient: null
   };
+  messages: Message[]
+  message: any;
 
   constructor(private messageService: MessageService, private conversationService: ConversationService,
-              private authService: AuthService) {  }
+              private authService: AuthService) { 
+
+                this.conversations = [];
+                this.messages = [];
+               }
 
   ngOnInit(): void {
 
-    // TODO: needs to add get id too.
-    this.conversationService.query().subscribe((res: HttpResponse<Conversation[]>) => this.onConversationSuccess(res.body));
 
-    // this.conversationService.create({sender: 'Will', recipient: 'Maddy', messages: []}).subscribe(res => {
-    //   console.log(res);
-    // })
+    this.conversationService.query().subscribe((res: HttpResponse<IConversation[]>) => this.onConversationSuccess(res.body));
+
   }
 
-  onConversationSuccess(conversations: Conversation[] | null): void {
+  onConversationSuccess(conversations: IConversation[] | null): void {
+    // Might only be getting where convo.sender == getEmail()
     this.conversations = conversations?.filter((convo) => (convo.sender || convo.recipient) == this.authService.getEmail()) || [];
     this.conversations.forEach(e => this.addConversation(e));
   }
 
-  addConversation(conversation: Conversation):void {
+  addConversation(conversation: IConversation):void {
     this.conversation.addConversation({
+      id: conversation.id,
       sender: conversation.sender,
       recipient: conversation.recipient,
       messages: conversation.messages
@@ -64,8 +70,30 @@ export class MessengerComponent implements OnInit{
   });
   }
 
-  onClickConversation(): void {
+  addMessage(message: Message): void {
+    this.message.addMessage({
+      id: message.id,
+      message: message.message,
+      sentAt: message.sentAt,
+      senderEmail: message.senderEmail,
+      conversationId: message.conversation_id
+    });
 
+  }
+
+  onOpenConversationSuccess(messages: Message[] | null): void {
+    this.messages = messages || [];
+    this.messages.forEach(e => this.addMessage(e));
+  }
+
+  openConversation(conversation: IConversation): void {
+    // Might have to clear old messages first???
+    let id = conversation.id;
+    // This is for sending a new message
+    this.conversationService.setCurrentConversation(String(id));
+
+    this.conversationService.findMessages(conversation.id).subscribe((res: HttpResponse<Message[]>) =>
+     this.onOpenConversationSuccess(res.body))
   }
 
 }

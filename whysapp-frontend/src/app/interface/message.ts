@@ -1,7 +1,9 @@
 import { Conversation } from "./conversation"
 
 export interface Message {
+    id: number;
     message: String;
     sentAt: Date;
-    conversation: Conversation;
+    senderEmail: String;
+    conversation_id: number;
 }

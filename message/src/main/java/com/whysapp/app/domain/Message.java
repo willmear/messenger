@@ -8,6 +8,8 @@ import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 @Data
 @Builder
 @NoArgsConstructor
@@ -22,7 +24,8 @@ public class Message {
     private LocalDateTime sentAt;
     private String senderEmail;
 
-    @ManyToOne
+    @JsonBackReference
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "conversation_id")
     public Conversation conversation;
 }

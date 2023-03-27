@@ -18,13 +18,18 @@
             <ul class="list-unstyled conversation-list mt-2 mb-0">
                 <li *ngFor="let conversation of conversations" class="clearfix">
                     <div class="about">
-                        <div class="name">{{ conversation.recipient }}</div>
+                        <a (click)="openConversation(conversation)" class="name">{{ conversation.recipient }}</a>
                     </div>
                 </li>
             </ul>
         </div>
         <div class="chat">
             <div class="messages">
+                <ul class="list-unstyled message-list mt-2 mb-0">
+                    <li *ngFor="let message of messages" class="clearfix">
+                        <span class="name">{{ message.message }}</span>
+                    </li>
+                </ul>
             
             </div>
             <div class="input-group message-input">
