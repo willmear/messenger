@@ -30,14 +30,16 @@
                         <span class="name">{{ message.message }}</span>
                     </li>
                 </ul>
-            
+
             </div>
-            <div class="input-group message-input">
-                <div class="input-group-prepend">
-                    <button class="input-group-text"><fa-icon [icon]="faPaperPlane"></fa-icon></button>
+            <form name="messageForm" #f="ngForm" novalidate (ngSubmit)="f.form.valid && onMessageSubmit()">
+                <div class="input-group message-input form-group">
+                    <div class="input-group-prepend">
+                        <button type="submit" class="input-group-text"><fa-icon [icon]="faPaperPlane"></fa-icon></button>
+                    </div>
+                    <input [(ngModel)]="messageForm.newMessage" name="newMessage" type="text" class="form-control" placeholder="Search..." #newMessage="ngModel">
                 </div>
-                <input type="text" class="form-control" placeholder="Search...">
-            </div>
+        </form>
         </div>
     </div>
 </div>

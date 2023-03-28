@@ -7,3 +7,5 @@ export interface Message {
     senderEmail: String;
     conversation_id: number;
 }
+
+export type IMessage = Omit<Message, 'id'>;

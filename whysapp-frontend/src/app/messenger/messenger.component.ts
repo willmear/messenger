@@ -2,7 +2,7 @@ import { HttpResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { faMagnifyingGlass,faPaperPlane, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { Conversation, IConversation } from '../interface/conversation';
-import { Message } from '../interface/message';
+import { IMessage, Message } from '../interface/message';
 import { ConversationService } from '../_service/conversation.service';
 import { MessageService } from '../_service/message.service';
 import { AuthService } from "../_service/auth.service";
@@ -25,6 +25,9 @@ export class MessengerComponent implements OnInit{
   };
   messages: Message[]
   message: any;
+  messageForm: any = {
+    newMessage: null
+  };
 
   constructor(private messageService: MessageService, private conversationService: ConversationService,
               private authService: AuthService) { 
@@ -63,6 +66,7 @@ export class MessengerComponent implements OnInit{
 
     this.conversationService.create(newConvo).subscribe({next: data =>{
       console.log(data);
+      this.ngOnInit();
     },
     error: err => {
       this.errorMessage = err.error.message;
@@ -94,6 +98,32 @@ export class MessengerComponent implements OnInit{
 
     this.conversationService.findMessages(conversation.id).subscribe((res: HttpResponse<Message[]>) =>
      this.onOpenConversationSuccess(res.body))
+  }
+
+  onMessageSubmit(): void {
+    let convoId = this.conversationService.getCurrentConversation();
+    let senderEmail = this.authService.getEmail();
+    let email: string;
+
+    if (senderEmail != null) {
+      email = senderEmail.toString();
+    } else {
+      email = '';
+    }
+
+    const currentDate = new Date();
+    const {newMessage} = this.messageForm;
+    const messageString: string = newMessage as string
+    console.log(messageString);
+
+    this.conversationService.createMessage({message: newMessage, sentAt: currentDate, senderEmail: email, conversation: {id: convoId}}).subscribe({next: data => {
+      console.log(data);
+      this.ngOnInit();
+    },
+    error: err => {
+      this.errorMessage = err.error.message;
+    }
+  });
   }
 
 }

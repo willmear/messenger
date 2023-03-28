@@ -25,11 +25,16 @@ export class ConversationService {
     return this.http.post<Conversation>(`${this.resourceUrl}`, conversation, { observe: 'response' });
   }
 
-  // TODO: findById GET request.
-
+  // move to message service
   findMessages(id: number): Observable<HttpResponse<Message[]>> {
     return this.http.get<Message[]>(`${this.resourceUrl}/messages/${id}`, {observe: 'response'});
   }
+
+  //move to message service
+  createMessage(message: {message: string, sentAt: Date, senderEmail: string, conversation: {id: number}}): Observable<HttpResponse<Message>> {
+    return this.http.post<Message>(`${this.resourceUrl}/new-message`, message, { observe: 'response' });
+  }
+
 
   public setCurrentConversation(conversationId: string) {
     localStorage.setItem('currentConversation', conversationId);
