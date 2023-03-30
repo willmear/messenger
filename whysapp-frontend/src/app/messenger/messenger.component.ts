@@ -19,6 +19,7 @@ export class MessengerComponent implements OnInit{
   faPlus = faPlus;
   errorMessage = '';
   conversations: IConversation[];
+  conversationsRecipient: IConversation[];
   conversation: any;
   conversationForm: any = {
     recipient: null
@@ -30,10 +31,11 @@ export class MessengerComponent implements OnInit{
   };
 
   constructor(private messageService: MessageService, private conversationService: ConversationService,
-              private authService: AuthService) { 
+              protected authService: AuthService) { 
 
                 this.conversations = [];
                 this.messages = [];
+                this.conversationsRecipient = [];
                }
 
   ngOnInit(): void {
@@ -44,8 +46,11 @@ export class MessengerComponent implements OnInit{
   }
 
   onConversationSuccess(conversations: IConversation[] | null): void {
+    // this.conversationsRecipient = conversations?.filter((convo) => (convo.recipient) == this.authService.getEmail()) || [];
     // Might only be getting where convo.sender == getEmail()
-    this.conversations = conversations?.filter((convo) => (convo.sender || convo.recipient) == this.authService.getEmail()) || [];
+    this.conversations = conversations?.filter((convo) => convo.sender == this.authService.getEmail() || convo.recipient == this.authService.getEmail()) || [];
+    // this.conversations.concat(this.conversations, this.conversationsRecipient);
+    // console.log(this.conversationsRecipient);
     this.conversations.forEach(e => this.addConversation(e));
   }
 

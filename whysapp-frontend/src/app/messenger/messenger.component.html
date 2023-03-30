@@ -17,8 +17,11 @@
             </form>
             <ul class="list-unstyled conversation-list mt-2 mb-0">
                 <li *ngFor="let conversation of conversations" class="clearfix">
-                    <div class="about">
+                    <div class="about" *ngIf="conversation.recipient != authService.getEmail()">
                         <a (click)="openConversation(conversation)" class="name">{{ conversation.recipient }}</a>
+                    </div>
+                    <div class="about" *ngIf="conversation.recipient == authService.getEmail()">
+                        <a (click)="openConversation(conversation)" class="name">{{ conversation.sender }}</a>
                     </div>
                 </li>
             </ul>

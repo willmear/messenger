@@ -2,8 +2,9 @@
 <module version="4">
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
-      <excludeFolder url="file://$MODULE_DIR$/whysapp-frontend/dist" />
+      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/whysapp-frontend/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/whysapp-frontend/dist" />
     </content>
   </component>
 </module>

@@ -5,8 +5,54 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="38da1df7-686c-4a26-838a-f4169a74f9a3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/message/src/main/java/com/whysapp/app/domain/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/message/src/main/java/com/whysapp/app/domain/Message.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/message/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/message/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/message/target/classes/com/whysapp/app/MessagesApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/message/target/classes/com/whysapp/app/MessagesApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/message/target/classes/com/whysapp/app/domain/Conversation$ConversationBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/message/target/classes/com/whysapp/app/domain/Conversation$ConversationBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/message/target/classes/com/whysapp/app/domain/Conversation.class" beforeDir="false" afterPath="$PROJECT_DIR$/message/target/classes/com/whysapp/app/domain/Conversation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/message/target/classes/com/whysapp/app/domain/Message$MessageBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/message/target/classes/com/whysapp/app/domain/Message$MessageBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/message/target/classes/com/whysapp/app/domain/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/message/target/classes/com/whysapp/app/domain/Message.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/message/target/classes/com/whysapp/app/exception/ConversationNotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/message/target/classes/com/whysapp/app/exception/ConversationNotFoundException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/message/target/classes/com/whysapp/app/exception/MessageNotFoundException.class" beforeDir="false" afterPath="$PROJECT_DIR$/message/target/classes/com/whysapp/app/exception/MessageNotFoundException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/message/target/classes/com/whysapp/app/repository/ConversationRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/message/target/classes/com/whysapp/app/repository/ConversationRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/message/target/classes/com/whysapp/app/repository/MessageRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/message/target/classes/com/whysapp/app/repository/MessageRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/message/target/classes/com/whysapp/app/resource/ConversationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/message/target/classes/com/whysapp/app/resource/ConversationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/message/target/classes/com/whysapp/app/resource/ConversationModelAssembler.class" beforeDir="false" afterPath="$PROJECT_DIR$/message/target/classes/com/whysapp/app/resource/ConversationModelAssembler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/message/target/classes/com/whysapp/app/resource/MessageController.class" beforeDir="false" afterPath="$PROJECT_DIR$/message/target/classes/com/whysapp/app/resource/MessageController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/message/target/classes/com/whysapp/app/resource/MessageModelAssembler.class" beforeDir="false" afterPath="$PROJECT_DIR$/message/target/classes/com/whysapp/app/resource/MessageModelAssembler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/message/target/classes/com/whysapp/app/security/SecurityConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/message/target/classes/com/whysapp/app/security/SecurityConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/message/target/classes/com/whysapp/app/service/ConversationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/message/target/classes/com/whysapp/app/service/ConversationService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/message/target/classes/com/whysapp/app/service/MessageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/message/target/classes/com/whysapp/app/service/MessageService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/message/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/message/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/user/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/target/classes/com/whysapp/app/UserApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/user/target/classes/com/whysapp/app/UserApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/target/classes/com/whysapp/app/domain/User$UserBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/user/target/classes/com/whysapp/app/domain/User$UserBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/target/classes/com/whysapp/app/domain/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/user/target/classes/com/whysapp/app/domain/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/target/classes/com/whysapp/app/enums/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/user/target/classes/com/whysapp/app/enums/Role.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/target/classes/com/whysapp/app/repository/UserRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/user/target/classes/com/whysapp/app/repository/UserRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/target/classes/com/whysapp/app/security/auth/AuthenticationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/user/target/classes/com/whysapp/app/security/auth/AuthenticationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/target/classes/com/whysapp/app/security/auth/AuthenticationRequest$AuthenticationRequestBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/user/target/classes/com/whysapp/app/security/auth/AuthenticationRequest$AuthenticationRequestBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/target/classes/com/whysapp/app/security/auth/AuthenticationRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/user/target/classes/com/whysapp/app/security/auth/AuthenticationRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/target/classes/com/whysapp/app/security/auth/AuthenticationResponse$AuthenticationResponseBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/user/target/classes/com/whysapp/app/security/auth/AuthenticationResponse$AuthenticationResponseBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/target/classes/com/whysapp/app/security/auth/AuthenticationResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/user/target/classes/com/whysapp/app/security/auth/AuthenticationResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/target/classes/com/whysapp/app/security/auth/AuthenticationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/user/target/classes/com/whysapp/app/security/auth/AuthenticationService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/target/classes/com/whysapp/app/security/auth/RegisterRequest$RegisterRequestBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/user/target/classes/com/whysapp/app/security/auth/RegisterRequest$RegisterRequestBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/target/classes/com/whysapp/app/security/auth/RegisterRequest.class" beforeDir="false" afterPath="$PROJECT_DIR$/user/target/classes/com/whysapp/app/security/auth/RegisterRequest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/target/classes/com/whysapp/app/security/config/ApplicationConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/user/target/classes/com/whysapp/app/security/config/ApplicationConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/target/classes/com/whysapp/app/security/config/JwtAuthenticationFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/user/target/classes/com/whysapp/app/security/config/JwtAuthenticationFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/target/classes/com/whysapp/app/security/config/JwtService.class" beforeDir="false" afterPath="$PROJECT_DIR$/user/target/classes/com/whysapp/app/security/config/JwtService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/target/classes/com/whysapp/app/security/config/LogoutService.class" beforeDir="false" afterPath="$PROJECT_DIR$/user/target/classes/com/whysapp/app/security/config/LogoutService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/target/classes/com/whysapp/app/security/config/SecurityConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/user/target/classes/com/whysapp/app/security/config/SecurityConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/target/classes/com/whysapp/app/security/token/Token$TokenBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/user/target/classes/com/whysapp/app/security/token/Token$TokenBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/target/classes/com/whysapp/app/security/token/Token.class" beforeDir="false" afterPath="$PROJECT_DIR$/user/target/classes/com/whysapp/app/security/token/Token.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/target/classes/com/whysapp/app/security/token/TokenRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/user/target/classes/com/whysapp/app/security/token/TokenRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/target/classes/com/whysapp/app/security/token/TokenType.class" beforeDir="false" afterPath="$PROJECT_DIR$/user/target/classes/com/whysapp/app/security/token/TokenType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/user/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/target/user-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/user.iml" beforeDir="false" afterPath="$PROJECT_DIR$/user/user.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/whysapp-backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/whysapp-backend.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,6 +235,8 @@
       <workItem from="1679513572400" duration="619000" />
       <workItem from="1679514936185" duration="855000" />
       <workItem from="1679772479895" duration="515000" />
+      <workItem from="1680119082341" duration="968000" />
+      <workItem from="1680120458275" duration="1354000" />
     </task>
     <servers />
   </component>
