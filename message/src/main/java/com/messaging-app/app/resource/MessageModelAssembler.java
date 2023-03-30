@@ -1,6 +1,5 @@
 package com.whysapp.app.resource;
 
-import com.whysapp.app.domain.Conversation;
 import com.whysapp.app.domain.Message;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.hateoas.server.RepresentationModelAssembler;

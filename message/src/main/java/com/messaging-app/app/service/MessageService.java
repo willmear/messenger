@@ -1,6 +1,5 @@
 package com.whysapp.app.service;
 
-import com.whysapp.app.domain.Conversation;
 import com.whysapp.app.domain.Message;
 import com.whysapp.app.exception.MessageNotFoundException;
 import com.whysapp.app.repository.MessageRepository;

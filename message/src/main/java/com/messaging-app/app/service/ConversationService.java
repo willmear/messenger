@@ -3,7 +3,6 @@ package com.whysapp.app.service;
 import com.whysapp.app.domain.Conversation;
 import com.whysapp.app.domain.Message;
 import com.whysapp.app.exception.ConversationNotFoundException;
-import com.whysapp.app.exception.MessageNotFoundException;
 import com.whysapp.app.repository.ConversationRepository;
 import com.whysapp.app.repository.MessageRepository;
 import com.whysapp.app.resource.ConversationModelAssembler;

@@ -95,14 +95,22 @@ export class MessengerComponent implements OnInit{
     this.messages.forEach(e => this.addMessage(e));
   }
 
-  openConversation(conversation: IConversation): void {
-    // Might have to clear old messages first???
+  openConversation(conversation?: IConversation, convoId?: number): void {
+    
+
+    if(convoId) {
+      this.conversationService.findMessages(convoId).subscribe((res: HttpResponse<Message[]>) =>
+     this.onOpenConversationSuccess(res.body))
+    } else if(conversation) {
+      // Might have to clear old messages first???
     let id = conversation.id;
     // This is for sending a new message
     this.conversationService.setCurrentConversation(String(id));
-
     this.conversationService.findMessages(conversation.id).subscribe((res: HttpResponse<Message[]>) =>
      this.onOpenConversationSuccess(res.body))
+    }
+
+    
   }
 
   onMessageSubmit(): void {
@@ -123,7 +131,7 @@ export class MessengerComponent implements OnInit{
 
     this.conversationService.createMessage({message: newMessage, sentAt: currentDate, senderEmail: email, conversation: {id: convoId}}).subscribe({next: data => {
       console.log(data);
-      this.ngOnInit();
+      this.openConversation(undefined, convoId);
     },
     error: err => {
       this.errorMessage = err.error.message;

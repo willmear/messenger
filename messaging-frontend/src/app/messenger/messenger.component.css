@@ -10,6 +10,7 @@
     grid-column-end: span 5;
     grid-row-start: 1;
     grid-row-end: span 5;
+    position: relative;
 }
 
 .card {
@@ -37,10 +38,15 @@
     right: 0;
     width: 75%;
     padding: 1%;
+    height:100%;
 }
 
-.chat .message-input {
-    margin-top: 63%;
+.message-input {
+    position: absolute;
+    bottom: 2%;
+    left: 1%;
+    width: 97%;
+    
 }
 
 .chat .messages {

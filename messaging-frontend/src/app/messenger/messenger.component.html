@@ -30,19 +30,20 @@
             <div class="messages">
                 <ul class="list-unstyled message-list mt-2 mb-0">
                     <li *ngFor="let message of messages" class="clearfix">
-                        <span class="name">{{ message.message }}</span>
+                        <span [ngStyle]="{'float': message.senderEmail == authService.getEmail() ? 'left': 'right'}" class="name">{{ message.message }}</span>
                     </li>
                 </ul>
-
             </div>
-            <form name="messageForm" #f="ngForm" novalidate (ngSubmit)="f.form.valid && onMessageSubmit()">
-                <div class="input-group message-input form-group">
-                    <div class="input-group-prepend">
-                        <button type="submit" class="input-group-text"><fa-icon [icon]="faPaperPlane"></fa-icon></button>
+            <div class="message-input">
+                <form name="messageForm" #f="ngForm" novalidate (ngSubmit)="f.form.valid && onMessageSubmit()">
+                    <div class="input-group form-group">
+                        <div class="input-group-prepend">
+                            <button type="submit" class="input-group-text"><fa-icon [icon]="faPaperPlane"></fa-icon></button>
+                        </div>
+                        <input [(ngModel)]="messageForm.newMessage" name="newMessage" type="text" class="form-control" placeholder="Search..." #newMessage="ngModel">
                     </div>
-                    <input [(ngModel)]="messageForm.newMessage" name="newMessage" type="text" class="form-control" placeholder="Search..." #newMessage="ngModel">
-                </div>
-        </form>
+                </form>
+            </div> 
         </div>
     </div>
 </div>
